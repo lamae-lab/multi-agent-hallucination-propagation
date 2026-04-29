@@ -22,19 +22,27 @@ def test_provider_has_required_keys():
 
 def test_provider_base_urls_are_strings():
     for name, provider in config.PROVIDERS.items():
-        assert isinstance(provider["base_url"], str), f"Provider '{name}' base_url not a string"
-        assert provider["base_url"].startswith("http"), f"Provider '{name}' base_url invalid"
+        assert isinstance(
+            provider["base_url"], str
+        ), f"Provider '{name}' base_url not a string"
+        assert provider["base_url"].startswith(
+            "http"
+        ), f"Provider '{name}' base_url invalid"
 
 
 def test_provider_api_keys_are_nonempty():
     for name, provider in config.PROVIDERS.items():
-        assert isinstance(provider["api_key"], str), f"Provider '{name}' api_key not a string"
+        assert isinstance(
+            provider["api_key"], str
+        ), f"Provider '{name}' api_key not a string"
         assert len(provider["api_key"]) > 0, f"Provider '{name}' api_key is empty"
 
 
 def test_provider_models_are_nonempty():
     for name, provider in config.PROVIDERS.items():
-        assert isinstance(provider["model"], str), f"Provider '{name}' model not a string"
+        assert isinstance(
+            provider["model"], str
+        ), f"Provider '{name}' model not a string"
         assert len(provider["model"]) > 0, f"Provider '{name}' model is empty"
 
 

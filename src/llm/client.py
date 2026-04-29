@@ -75,6 +75,79 @@ def chat(
     if max_tokens is not None:
         payload["max_tokens"] = max_tokens
 
+    data = _send_request(provider_name, provider, url, headers, payload)
+
+    try:
+        return data["choices"][0]["message"]["content"]
+    except (KeyError, IndexError, ValueError) as e:
+        raise LLMError(
+            f"Unexpected response format from provider '{provider_name}'. "
+            f"Expected choices[0].message.content but got: {data}"
+        ) from e
+
+
+def chat_raw(
+    messages: list[dict],
+    *,
+    tools: list[dict] | None = None,
+    model: str | None = None,
+    temperature: float = 0,
+    max_tokens: int | None = None,
+) -> dict:
+    """Send a chat completion request and return the full assistant message.
+
+    Unlike chat(), this returns the complete message dict including tool_calls.
+
+    Args:
+        messages: List of message dicts with 'role' and 'content' keys.
+        tools: List of tool definitions in OpenAI format.
+        model: Override the provider's default model.
+        temperature: Sampling temperature. Default 0 (deterministic).
+        max_tokens: Maximum tokens in completion.
+
+    Returns:
+        The full choices[0].message dict from the API response.
+    """
+    provider_name = config.ACTIVE_PROVIDER
+
+    if provider_name not in config.PROVIDERS:
+        raise ValueError(
+            f"Unknown provider '{provider_name}'. "
+            f"Available providers: {', '.join(config.PROVIDERS.keys())}"
+        )
+
+    provider = config.PROVIDERS[provider_name]
+    url = f"{provider['base_url']}/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {provider['api_key']}",
+        "Content-Type": "application/json",
+    }
+
+    payload = {
+        "model": model or provider["model"],
+        "messages": messages,
+        "stream": False,
+        "temperature": temperature,
+    }
+    if max_tokens is not None:
+        payload["max_tokens"] = max_tokens
+    if tools:
+        payload["tools"] = tools
+        payload["tool_choice"] = "auto"
+
+    data = _send_request(provider_name, provider, url, headers, payload)
+
+    try:
+        return data["choices"][0]["message"]
+    except (KeyError, IndexError, ValueError) as e:
+        raise LLMError(
+            f"Unexpected response format from provider '{provider_name}'. "
+            f"Expected choices[0].message but got: {data}"
+        ) from e
+
+
+def _send_request(provider_name, provider, url, headers, payload):
+    """Send HTTP request to provider and return parsed JSON response."""
     try:
         response = requests.post(
             url,
@@ -106,11 +179,4 @@ def chat(
             f"{response.text}"
         )
 
-    try:
-        data = response.json()
-        return data["choices"][0]["message"]["content"]
-    except (KeyError, IndexError, ValueError) as e:
-        raise LLMError(
-            f"Unexpected response format from provider '{provider_name}'. "
-            f"Expected choices[0].message.content but got: {response.text[:500]}"
-        ) from e
+    return response.json()
