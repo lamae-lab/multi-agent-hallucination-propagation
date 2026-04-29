@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project artifacts
+experiments/results/*.jsonl
+experiments/results/runs/
+experiments/phase1_spike/results/
+notebooks/.ipynb_checkpoints/
+*.log
+
+# Secrets and local config
+.env
+.env.local
+*.local.yaml
+.claude/settings.local.json
+
+# Cache
+.cache/
+llm_cache/
+
+# Large data files
+data/raw/
+*.parquet

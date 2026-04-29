@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "halucinations_agents"
+version = "0.1.0"
+description = "Hallucination Resilience Across Multi-Agent Architectural Families"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.31",
+    "ollama>=0.4",
+    "litellm>=1.0",
+]
+
+[project.optional-dependencies]
+frameworks = [
+    "langgraph>=0.2",
+    "crewai>=0.80",
+    "autogen-agentchat>=0.4",
+    "openai-agents>=0.1",
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.8",
+    "black>=24.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
