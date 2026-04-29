@@ -22,7 +22,7 @@ PROVIDERS = {
     "ilaas": {
         "base_url": "https://llm.ilaas.fr/v1",
         "api_key": "REDACTED_KEY",
-        "model": "llama-3.3-70b",
+        "model": "qwen-3.6-35b-instruct",
         "timeout": 120,
         "verify_ssl": False,  # ILAAS cert revocation check fails on Windows
     },
