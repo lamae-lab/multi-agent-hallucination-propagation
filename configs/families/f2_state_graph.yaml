@@ -1,0 +1,13 @@
+name: "F2 Sequential State-Graph"
+family_id: "f2"
+agents:
+  - name: research_expert
+    role: "Research Expert"
+    system_prompt: "You are a research expert. Use the search_wikipedia tool to find factual information. Report your findings clearly."
+    tools: ["search_wikipedia"]
+  - name: analysis_expert
+    role: "Analysis Expert"
+    system_prompt: "You are an analysis expert. Synthesize information provided to you into a short, direct answer to the original question."
+    tools: []
+supervisor_prompt: "You manage a research expert and an analysis expert. Route factual lookups to research_expert. Route synthesis tasks to analysis_expert. Produce a final answer."
+max_iterations: 10

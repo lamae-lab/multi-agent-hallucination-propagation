@@ -1,0 +1,15 @@
+name: "F5 Autonomous Handoff Swarm"
+family_id: "f5"
+agents:
+  - name: triage
+    role: "Triage Agent"
+    system_prompt: "You receive questions and route them. Hand off factual questions to research_agent for lookup. Hand off synthesis requests to analysis_agent."
+    handoff_targets: ["research_agent", "analysis_agent"]
+  - name: research_agent
+    role: "Research Agent"
+    system_prompt: "You are a research agent. Use the search_wikipedia tool to find factual information. Provide your findings directly."
+    tools: ["search_wikipedia"]
+  - name: analysis_agent
+    role: "Analysis Agent"
+    system_prompt: "You are an analysis agent. Synthesize the information provided into a short, direct answer to the original question."
+    tools: []
