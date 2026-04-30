@@ -1,0 +1,6 @@
+Family   Runs   Errs   Survival   Distance   Amplify    Mutation   Marker         
+f1       4      0      0.250      0.25       0.000      0.000      self_validation_rate=0.250
+f2       4      0      0.000      0.75       0.000      0.250      state_freeze_rate=0.000
+f3       4      0      1.000      1.00       0.000      0.000      manager_amplification=0.500
+f4       4      0      1.000      4.00       0.000      0.467      consensus_rate=0.417
+f5       3      1      0.000      0.00       0.000      0.000      trust_chain_rate=0.000

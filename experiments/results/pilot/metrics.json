@@ -1,0 +1,52 @@
+{
+  "f1": {
+    "n_runs": 4,
+    "n_errors": 0,
+    "mean_survival": 0.25,
+    "mean_distance": 0.25,
+    "mean_amplification": 0.0,
+    "mean_mutation": 0.0,
+    "family_marker": 0.25,
+    "family_marker_name": "self_validation_rate"
+  },
+  "f2": {
+    "n_runs": 4,
+    "n_errors": 0,
+    "mean_survival": 0.0,
+    "mean_distance": 0.75,
+    "mean_amplification": 0.0,
+    "mean_mutation": 0.25,
+    "family_marker": 0.0,
+    "family_marker_name": "state_freeze_rate"
+  },
+  "f3": {
+    "n_runs": 4,
+    "n_errors": 0,
+    "mean_survival": 1.0,
+    "mean_distance": 1.0,
+    "mean_amplification": 0.0,
+    "mean_mutation": 0.0,
+    "family_marker": 0.5,
+    "family_marker_name": "manager_amplification"
+  },
+  "f4": {
+    "n_runs": 4,
+    "n_errors": 0,
+    "mean_survival": 1.0,
+    "mean_distance": 4.0,
+    "mean_amplification": 0.0,
+    "mean_mutation": 0.467,
+    "family_marker": 0.417,
+    "family_marker_name": "consensus_rate"
+  },
+  "f5": {
+    "n_runs": 3,
+    "n_errors": 1,
+    "mean_survival": 0.0,
+    "mean_distance": 0.0,
+    "mean_amplification": 0,
+    "mean_mutation": 0.0,
+    "family_marker": 0.0,
+    "family_marker_name": "trust_chain_rate"
+  }
+}

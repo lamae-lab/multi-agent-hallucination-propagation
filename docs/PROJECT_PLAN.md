@@ -269,7 +269,8 @@ halucinations_agents/
 │   ├── tasks/                   # HotpotQA, GSM8K, HaluEval, MedQA loaders
 │   ├── llm/                     # LLM client (Ollama-first, OpenAI-compat)
 │   ├── tracing/                 # JSONL trace serialization
-│   └── analysis/                # statistical analysis, plotting
+│   ├── analysis/                # statistical analysis, plotting
+│   └── ui/                      # experiment dashboard (Phase 4.5)
 ├── experiments/
 │   ├── phase1_spike/            # Ollama-compat spike test
 │   ├── run_main_study.py
@@ -362,6 +363,23 @@ halucinations_agents/
 - `notebooks/phase4_pilot.ipynb` — exploratory analysis of pilot.
 
 **Done when:** pilot produces sensible Survival × Amplification scatter; no crashes; metrics are reproducible across reruns.
+
+---
+
+### **Phase 4.5 — Experiment Dashboard UI** *(5–7 days)*
+
+**Goal:** Web-based dashboard for running experiments, viewing traces, and analyzing metrics interactively. Built after Phase 4 so all metrics and injection are available from day one.
+
+**Deliverables:**
+- `src/ui/` — Web application (Streamlit or Gradio) for the experiment dashboard.
+- **Experiment Runner**: Select families (any combination via checkboxes), pick dataset and number of questions, configure injection mode and parameters, run experiments with progress tracking.
+- **Trace Viewer**: Side-by-side trace comparison across families for the same question, message flow visualization with tool calls highlighted, expand/collapse individual agent messages.
+- **Metrics Dashboard**: Survival × Amplification scatter plots, propagation distance per family bar charts, family-specific behavioral markers (self-validation, state-freeze, manager-bias, consensus, trust-chain), heatmap of Family × Hallucination Type interaction.
+- **Family Comparison**: Select any 2–5 families, compare answers, metrics, and traces on the same questions. Diff view showing where answers diverge.
+- **Reports**: Per-family summary cards, export results to CSV/LaTeX for paper, aggregate statistics across experiment runs.
+- **Data Management**: Browse saved experiment runs, upload custom questions, manage HotpotQA/GSM8K/HaluEval samples.
+
+**Done when:** Dashboard loads, can run a 5-family × 5-question experiment from the UI, displays metrics and traces, exports results.
 
 ---
 
