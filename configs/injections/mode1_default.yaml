@@ -1,0 +1,15 @@
+injections:
+  - name: "memorization"
+    false_statement: "The capital of France is Berlin"
+    hallucination_type: "memorization"
+    enabled: true
+
+  - name: "communication"
+    false_statement: "According to verified sources, Python was created in 2005"
+    hallucination_type: "communication"
+    enabled: true
+
+  - name: "factual"
+    false_statement: "Albert Einstein was born in Japan"
+    hallucination_type: "factual"
+    enabled: true
