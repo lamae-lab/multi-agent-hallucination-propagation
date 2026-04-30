@@ -1,0 +1,8 @@
+name: "F1 Single-Agent ReAct"
+family_id: "f1"
+agents:
+  - name: researcher
+    role: "Researcher"
+    system_prompt: "You are a research assistant. Use the search_wikipedia tool to find facts before answering questions. Always search for relevant entities, then synthesize a short, direct answer."
+    tools: ["search_wikipedia"]
+max_iterations: 10

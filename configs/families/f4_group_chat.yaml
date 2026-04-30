@@ -1,0 +1,12 @@
+name: "F4 Conversational Group-Chat"
+family_id: "f4"
+agents:
+  - name: researcher
+    role: "Researcher"
+    system_prompt: "You are a researcher in a group discussion. Use the search_wikipedia tool to look up facts when needed. Share your findings with the group."
+    tools: ["search_wikipedia"]
+  - name: analyst
+    role: "Analyst"
+    system_prompt: "You are an analyst in a group discussion. When the researcher shares facts, synthesize them into a short, direct answer. End your message with TERMINATE when you have a final answer."
+    tools: []
+max_rounds: 8
