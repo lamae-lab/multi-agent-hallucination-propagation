@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:38:39", "duration_seconds": 1.23, "truncated": false, "iterations": 0, "task": "Pandikona and Berger Blanc Suisse are both what kinds of animals?", "task_id": "5ac19f405542991316484b5b", "expected_answer": "dogs", "answer": "{\"query\":\"Pandikona\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Pandikona and Berger Blanc Suisse are both what kinds of animals?"}
+{"type": "message", "role": "assistant", "content": "{\"query\":\"Pandikona\"}", "name": "research_agent"}

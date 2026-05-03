@@ -63,12 +63,22 @@ class F5HandoffSwarm(BaseFamily):
         start_time = time.time()
 
         async def _run():
-            return await Runner.run(
+            result = await Runner.run(
                 triage_agent,
                 f"Answer this question: {task.question}",
+                max_turns=15,
             )
+            await client.close()
+            return result
 
-        sdk_result = asyncio.run(_run())
+        from agents.exceptions import MaxTurnsExceeded
+
+        truncated = False
+        try:
+            sdk_result = asyncio.run(_run())
+        except MaxTurnsExceeded:
+            sdk_result = None
+            truncated = True
         duration = time.time() - start_time
 
         # Convert SDK output to our format
@@ -78,8 +88,12 @@ class F5HandoffSwarm(BaseFamily):
         ]
 
         # Extract info from SDK result
-        answer = sdk_result.final_output or ""
-        last_agent = sdk_result.last_agent.name if sdk_result.last_agent else "unknown"
+        if sdk_result is not None:
+            answer = sdk_result.final_output or ""
+            last_agent = sdk_result.last_agent.name if sdk_result.last_agent else "unknown"
+        else:
+            answer = ""
+            last_agent = "truncated"
 
         messages.append(
             Message(
@@ -96,7 +110,7 @@ class F5HandoffSwarm(BaseFamily):
             "temperature": 0,
             "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "duration_seconds": round(duration, 2),
-            "truncated": False,
+            "truncated": truncated,
             "family": self.family_id,
             "last_agent": last_agent,
         }

@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:26:29", "duration_seconds": 2.59, "truncated": false, "iterations": 0, "task": "Which actor does American Beauty and American Beauty have in common?", "task_id": "5ac3e0f7554299194317388b", "expected_answer": "Kevin Spacey", "answer": "{\n  \"query\": \"American Beauty film cast\"\n}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Which actor does American Beauty and American Beauty have in common?"}
+{"type": "message", "role": "assistant", "content": "{\n  \"query\": \"American Beauty film cast\"\n}", "name": "research_agent"}

@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T21:27:52", "duration_seconds": 3.67, "truncated": false, "iterations": 0, "task": "How far north from Salzburg is the Austrian village that shares a name with a controversial German Pilsner or pale lager?", "task_id": "halueval_631", "expected_answer": "The Austrian village is quite far north.", "answer": ""}
+{"type": "message", "role": "system", "content": "You manage a research expert and an analysis expert. Route factual lookups to research_expert. Route synthesis tasks to analysis_expert. Produce a final answer."}
+{"type": "message", "role": "user", "content": "How far north from Salzburg is the Austrian village that shares a name with a controversial German Pilsner or pale lager?"}
+{"type": "message", "role": "assistant", "content": null, "name": "supervisor"}

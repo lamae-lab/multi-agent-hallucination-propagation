@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:39:21", "duration_seconds": 2.9, "truncated": false, "iterations": 0, "task": "The Prussian General Carl von Clausewitz is associated with what type of realism?", "task_id": "5ae382ee5542992e3233c430", "expected_answer": "Modern thinkers associated with classical realism are Carl von Clausewitz", "answer": "{\n  \"query\": \"Carl von Clausewitz realism type\"\n}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "The Prussian General Carl von Clausewitz is associated with what type of realism?"}
+{"type": "message", "role": "assistant", "content": "{\n  \"query\": \"Carl von Clausewitz realism type\"\n}", "name": "research_agent"}

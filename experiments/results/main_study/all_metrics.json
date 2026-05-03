@@ -1,0 +1,97 @@
+{
+  "f1": {
+    "n_runs": 210,
+    "n_errors": 0,
+    "mean_survival": 0.519,
+    "mean_distance": 0.8,
+    "mean_amplification": 0.0,
+    "mean_mutation": 0.4,
+    "family_marker": 0.439,
+    "family_marker_name": "self_validation_rate",
+    "mean_faithfulness": 0.139,
+    "mean_task_success": 0.439,
+    "hallucination_rate": 0.861,
+    "hallucination_ci": [
+      0.811,
+      0.911
+    ],
+    "mean_tokens": 165,
+    "mean_latency": 2.43
+  },
+  "f2": {
+    "n_runs": 210,
+    "n_errors": 0,
+    "mean_survival": 0.143,
+    "mean_distance": 0.41,
+    "mean_amplification": 0.0,
+    "mean_mutation": 0.01,
+    "family_marker": 0.0,
+    "family_marker_name": "state_freeze_rate",
+    "mean_faithfulness": 0.169,
+    "mean_task_success": 0.528,
+    "hallucination_rate": 0.85,
+    "hallucination_ci": [
+      0.8,
+      0.9
+    ],
+    "mean_tokens": 131,
+    "mean_latency": 2.26
+  },
+  "f3": {
+    "n_runs": 210,
+    "n_errors": 0,
+    "mean_survival": 0.614,
+    "mean_distance": 0.65,
+    "mean_amplification": 0.0,
+    "mean_mutation": 0.486,
+    "family_marker": 0.019,
+    "family_marker_name": "manager_amplification",
+    "mean_faithfulness": 0.183,
+    "mean_task_success": 0.483,
+    "hallucination_rate": 0.794,
+    "hallucination_ci": [
+      0.728,
+      0.856
+    ],
+    "mean_tokens": 189,
+    "mean_latency": 1.83
+  },
+  "f4": {
+    "n_runs": 210,
+    "n_errors": 0,
+    "mean_survival": 0.765,
+    "mean_distance": 7.52,
+    "mean_amplification": 0.038,
+    "mean_mutation": 0.821,
+    "family_marker": 0.506,
+    "family_marker_name": "consensus_rate",
+    "mean_faithfulness": 0.088,
+    "mean_task_success": 0.1,
+    "hallucination_rate": 0.922,
+    "hallucination_ci": [
+      0.883,
+      0.956
+    ],
+    "mean_tokens": 898,
+    "mean_latency": 9.13
+  },
+  "f5": {
+    "n_runs": 210,
+    "n_errors": 0,
+    "mean_survival": 0.533,
+    "mean_distance": 0.55,
+    "mean_amplification": 0.0,
+    "mean_mutation": 0.424,
+    "family_marker": 0.0,
+    "family_marker_name": "trust_chain_rate",
+    "mean_faithfulness": 0.131,
+    "mean_task_success": 0.45,
+    "hallucination_rate": 0.889,
+    "hallucination_ci": [
+      0.839,
+      0.933
+    ],
+    "mean_tokens": 83,
+    "mean_latency": 1.88
+  }
+}

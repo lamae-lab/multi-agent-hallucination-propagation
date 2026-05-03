@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:32:05", "duration_seconds": 1.44, "truncated": false, "iterations": 0, "task": "The facility where Robert Croft worked as a navy instructor was also known as?", "task_id": "5ae361605542994393b9e69b", "expected_answer": "\"Home of the Submarine Force\"", "answer": "{\n  \"query\": \"Robert Croft navy instructor facility also known as\"\n}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "The facility where Robert Croft worked as a navy instructor was also known as?"}
+{"type": "message", "role": "assistant", "content": "{\n  \"query\": \"Robert Croft navy instructor facility also known as\"\n}", "name": "research_agent"}

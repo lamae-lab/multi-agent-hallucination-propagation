@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:49:32", "duration_seconds": 3.88, "truncated": false, "iterations": 0, "task": "What Hockey team does Evander Kane play for?", "task_id": "halueval_9674", "expected_answer": "Evander Kane plays for Sabres.", "answer": "{\"query\": \"Evander Kane hockey\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "What Hockey team does Evander Kane play for?"}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"Evander Kane hockey\"}", "name": "research_agent"}

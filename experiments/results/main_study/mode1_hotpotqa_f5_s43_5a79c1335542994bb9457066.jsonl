@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T21:27:02", "duration_seconds": 0.76, "truncated": false, "iterations": 0, "task": "Eric Ambler and Carol Shields are both best Known for what profession?", "task_id": "5a79c1335542994bb9457066", "expected_answer": "author", "answer": "{\n  \"question\": \"Eric Ambler and Carol Shields are both best known for what profession?\"\n}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Eric Ambler and Carol Shields are both best Known for what profession?"}
+{"type": "message", "role": "assistant", "content": "{\n  \"question\": \"Eric Ambler and Carol Shields are both best known for what profession?\"\n}", "name": "triage"}

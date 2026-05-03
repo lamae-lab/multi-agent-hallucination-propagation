@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T22:17:41", "duration_seconds": 1.31, "truncated": false, "iterations": 0, "task": "What was the other name for the war between the Cherokee people and white settlers in 1793?", "task_id": "5ae678915542996d980e7b70", "expected_answer": "Chickamauga Wars", "answer": ""}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "What was the other name for the war between the Cherokee people and white settlers in 1793?"}
+{"type": "message", "role": "assistant", "content": "", "name": "triage"}

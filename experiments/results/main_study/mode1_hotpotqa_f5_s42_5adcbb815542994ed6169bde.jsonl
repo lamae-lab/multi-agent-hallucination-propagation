@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:42:00", "duration_seconds": 2.96, "truncated": false, "iterations": 0, "task": "Beer Wars covers the differences between large corporate breweries, and small breweries, such as what brewery that is headquartered in Escondido, california?", "task_id": "5adcbb815542994ed6169bde", "expected_answer": "Stone Brewing", "answer": "{\"query\": \"Stone Brewing\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Beer Wars covers the differences between large corporate breweries, and small breweries, such as what brewery that is headquartered in Escondido, california?"}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"Stone Brewing\"}", "name": "research_agent"}

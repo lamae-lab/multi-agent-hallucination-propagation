@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T21:14:16", "duration_seconds": 1.02, "truncated": false, "iterations": 0, "task": "San Marco and Medina are both what type of game?", "task_id": "5ab42e55554299753aec5a53", "expected_answer": "board", "answer": ""}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "San Marco and Medina are both what type of game?"}
+{"type": "message", "role": "assistant", "content": "", "name": "triage"}

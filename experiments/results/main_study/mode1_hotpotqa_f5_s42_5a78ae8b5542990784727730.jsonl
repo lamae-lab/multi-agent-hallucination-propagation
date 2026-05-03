@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:43:56", "duration_seconds": 3.01, "truncated": false, "iterations": 0, "task": "How far from Sacramento is the flight school in Atwater?", "task_id": "5a78ae8b5542990784727730", "expected_answer": "about 115 miles (185 km)", "answer": "{\"query\": \"flight school Atwater California\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "How far from Sacramento is the flight school in Atwater?"}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"flight school Atwater California\"}", "name": "research_agent"}

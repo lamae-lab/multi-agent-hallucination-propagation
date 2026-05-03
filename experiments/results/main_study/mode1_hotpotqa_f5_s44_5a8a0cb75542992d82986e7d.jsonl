@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T22:10:41", "duration_seconds": 1.06, "truncated": false, "iterations": 0, "task": "How long is the tidal estuary in which Branford is a shoreline town?", "task_id": "5a8a0cb75542992d82986e7d", "expected_answer": "110 miles", "answer": ""}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "How long is the tidal estuary in which Branford is a shoreline town?"}
+{"type": "message", "role": "assistant", "content": "", "name": "triage"}

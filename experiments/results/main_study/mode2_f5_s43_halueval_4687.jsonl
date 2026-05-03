@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T21:28:49", "duration_seconds": 1.08, "truncated": false, "iterations": 0, "task": "Are Ben Okri and Nicholas Evans both novelists?", "task_id": "halueval_4687", "expected_answer": "yes", "answer": "{\"query\":\"Ben Okri\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Are Ben Okri and Nicholas Evans both novelists?"}
+{"type": "message", "role": "assistant", "content": "{\"query\":\"Ben Okri\"}", "name": "research_agent"}

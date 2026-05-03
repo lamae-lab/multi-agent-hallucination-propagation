@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T21:31:31", "duration_seconds": 1.9, "truncated": false, "iterations": 0, "task": "Which genus contains more species: Fallopia, or Nicandra?", "task_id": "halueval_7425", "expected_answer": "Fallopia", "answer": "{\"query\": \"Fallopia (plant)\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Which genus contains more species: Fallopia, or Nicandra?"}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"Fallopia (plant)\"}", "name": "research_agent"}

@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:44:38", "duration_seconds": 2.29, "truncated": false, "iterations": 0, "task": "Baraki Barak District is situated in the western part of a province whose capital is what?", "task_id": "5ae12a4b55429920d52342df", "expected_answer": "Puli Alam", "answer": "{\"query\":\"Baraki Barak District\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Baraki Barak District is situated in the western part of a province whose capital is what?"}
+{"type": "message", "role": "assistant", "content": "{\"query\":\"Baraki Barak District\"}", "name": "research_agent"}

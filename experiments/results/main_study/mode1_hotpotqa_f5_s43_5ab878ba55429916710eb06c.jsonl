@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T21:16:52", "duration_seconds": 3.84, "truncated": false, "iterations": 0, "task": "Which game was published first, Near and Far or King of Tokyo?", "task_id": "5ab878ba55429916710eb06c", "expected_answer": "King of Tokyo", "answer": "{\"query\": \"Near and Far (board game)\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Which game was published first, Near and Far or King of Tokyo?"}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"Near and Far (board game)\"}", "name": "research_agent"}

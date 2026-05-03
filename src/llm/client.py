@@ -78,7 +78,12 @@ def chat(
     data = _send_request(provider_name, provider, url, headers, payload)
 
     try:
-        return data["choices"][0]["message"]["content"]
+        msg = data["choices"][0]["message"]
+        content = msg.get("content") or ""
+        # Reasoning models (e.g. gpt-oss-120b) may put output in reasoning_content
+        if not content and msg.get("reasoning_content"):
+            content = msg["reasoning_content"]
+        return content
     except (KeyError, IndexError, ValueError) as e:
         raise LLMError(
             f"Unexpected response format from provider '{provider_name}'. "

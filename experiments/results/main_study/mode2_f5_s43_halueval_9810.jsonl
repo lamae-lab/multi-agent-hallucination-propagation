@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T21:32:05", "duration_seconds": 4.86, "truncated": false, "iterations": 0, "task": "Widows' Peak stars what English actress commonly known as  Dame", "task_id": "halueval_9810", "expected_answer": "Joan Plowright appeared in Widows' Peak, a 1994 British-Irish movie with a talented cast.", "answer": "{\"query\": \"Widows' Peak 1994 cast Maggie Smith\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Widows' Peak stars what English actress commonly known as  Dame"}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"Widows' Peak 1994 cast Maggie Smith\"}", "name": "research_agent"}

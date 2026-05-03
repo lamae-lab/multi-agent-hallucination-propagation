@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T21:57:22", "duration_seconds": 1.67, "truncated": false, "iterations": 0, "task": "Brinckerhoff, New Yorkhad a role in a CBS sitcom created by whom?", "task_id": "5a81d51a55429903bc27b9d2", "expected_answer": "Justin Adler", "answer": "{\"query\":\"Brinckerhoff, New York CBS sitcom\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Brinckerhoff, New Yorkhad a role in a CBS sitcom created by whom?"}
+{"type": "message", "role": "assistant", "content": "{\"query\":\"Brinckerhoff, New York CBS sitcom\"}", "name": "research_agent"}

@@ -27,7 +27,7 @@ def detect_semantic_similarity(text: str, false_statement: str) -> float:
         f"Reply with ONLY a number between 0.0 and 1.0, nothing else."
     )
     try:
-        response = chat([{"role": "user", "content": prompt}], max_tokens=10)
+        response = chat([{"role": "user", "content": prompt}], max_tokens=100)
         score = float(response.strip())
         return max(0.0, min(1.0, score))
     except (ValueError, TypeError):
@@ -51,7 +51,7 @@ def detect_llm_judge(text: str, false_statement: str) -> str:
         f"- absent (claim not present at all)"
     )
     try:
-        response = chat([{"role": "user", "content": prompt}], max_tokens=10)
+        response = chat([{"role": "user", "content": prompt}], max_tokens=100)
         verdict = response.strip().lower()
         if verdict in ("verbatim", "paraphrased", "contradicted", "absent"):
             return verdict

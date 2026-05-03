@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T22:23:52", "duration_seconds": 3.57, "truncated": false, "iterations": 0, "task": "which visionary leader, and a great diplomat. was the legendary Crow chief of Little People of the Pryor Mountains ", "task_id": "halueval_6218", "expected_answer": "The legendary Crow chief was someone else.", "answer": "{\"query\": \"Pryor Mountains Little People Crow\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "which visionary leader, and a great diplomat. was the legendary Crow chief of Little People of the Pryor Mountains "}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"Pryor Mountains Little People Crow\"}", "name": "research_agent"}

@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:38:06", "duration_seconds": 2.02, "truncated": false, "iterations": 0, "task": " Which movie did Disney produce first,  The Many Adventures of Winnie the Pooh or Ride a Wild Pony?", "task_id": "5a7b1023554299042af8f6c2", "expected_answer": "Ride a Wild Pony", "answer": "{\n  \"query\": \"The Many Adventures of Winnie the Pooh Disney release date\"\n}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": " Which movie did Disney produce first,  The Many Adventures of Winnie the Pooh or Ride a Wild Pony?"}
+{"type": "message", "role": "assistant", "content": "{\n  \"query\": \"The Many Adventures of Winnie the Pooh Disney release date\"\n}", "name": "research_agent"}

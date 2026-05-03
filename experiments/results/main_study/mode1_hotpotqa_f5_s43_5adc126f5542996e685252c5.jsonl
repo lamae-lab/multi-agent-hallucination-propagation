@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T21:22:48", "duration_seconds": 1.41, "truncated": false, "iterations": 0, "task": "What part of Australia is Alice River and Rupertswood in?", "task_id": "5adc126f5542996e685252c5", "expected_answer": "Victoria", "answer": "{\n  \"query\": \"Alice River Australia\"\n}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "What part of Australia is Alice River and Rupertswood in?"}
+{"type": "message", "role": "assistant", "content": "{\n  \"query\": \"Alice River Australia\"\n}", "name": "research_agent"}

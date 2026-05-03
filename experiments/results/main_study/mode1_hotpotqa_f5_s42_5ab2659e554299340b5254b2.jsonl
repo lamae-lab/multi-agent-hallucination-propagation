@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:41:15", "duration_seconds": 1.24, "truncated": false, "iterations": 0, "task": "From March 631 to April 631, Farrukhzad Khosrau V was the king of an empire that succeeded which empire?", "task_id": "5ab2659e554299340b5254b2", "expected_answer": "the Parthian Empire", "answer": "{\n  \"query\": \"Farrukhzad Khosrau V\"\n}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "From March 631 to April 631, Farrukhzad Khosrau V was the king of an empire that succeeded which empire?"}
+{"type": "message", "role": "assistant", "content": "{\n  \"query\": \"Farrukhzad Khosrau V\"\n}", "name": "research_agent"}

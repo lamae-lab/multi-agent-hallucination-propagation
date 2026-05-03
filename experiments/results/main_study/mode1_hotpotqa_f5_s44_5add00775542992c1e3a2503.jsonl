@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T22:18:22", "duration_seconds": 3.37, "truncated": false, "iterations": 0, "task": "The inventor of the Maxim Gun issued 1.9 million shares to what man?", "task_id": "5add00775542992c1e3a2503", "expected_answer": "Nathan Rothschild", "answer": "{\"query\": \"\\\"1.9 million\\\" shares Maxim\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "The inventor of the Maxim Gun issued 1.9 million shares to what man?"}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"\\\"1.9 million\\\" shares Maxim\"}", "name": "research_agent"}

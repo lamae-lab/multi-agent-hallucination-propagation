@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:27:10", "duration_seconds": 2.32, "truncated": false, "iterations": 0, "task": "Ken Pruitt  was a Republican member of an upper house of the legislature with how many members ?", "task_id": "5ae518655542993aec5ec139", "expected_answer": "40 members", "answer": "{\"query\": \"Pruitt Florida Senate Ken\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Ken Pruitt  was a Republican member of an upper house of the legislature with how many members ?"}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"Pruitt Florida Senate Ken\"}", "name": "research_agent"}

@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T22:19:08", "duration_seconds": 1.41, "truncated": false, "iterations": 0, "task": "Where was the music festival Billy McFarland was charged with wire fraud for supposed to take place?", "task_id": "5a8595a85542992a431d1b48", "expected_answer": "Great Exuma", "answer": ""}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Where was the music festival Billy McFarland was charged with wire fraud for supposed to take place?"}
+{"type": "message", "role": "assistant", "content": "", "name": "triage"}

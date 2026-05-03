@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T20:33:40", "duration_seconds": 2.36, "truncated": false, "iterations": 0, "task": "Which \"Roseanne\" star is in Scream 2?", "task_id": "5a7557d75542992d0ec05f68", "expected_answer": "Laurie Metcalf", "answer": "{\"query\": \"\\\"Scream 2\\\" cast\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Which \"Roseanne\" star is in Scream 2?"}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"\\\"Scream 2\\\" cast\"}", "name": "research_agent"}

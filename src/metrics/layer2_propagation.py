@@ -12,11 +12,7 @@ from dataclasses import dataclass
 from src.agents.base import Result
 from src.injection.mode1_synthetic import InjectionConfig
 from src.llm.client import chat
-from src.metrics.detection import (
-    detect_exact_match,
-    detect_llm_judge,
-    detect_semantic_similarity,
-)
+from src.metrics.detection import detect_exact_match
 
 
 @dataclass
@@ -69,13 +65,39 @@ def compute_metrics(result: Result, injection_config: InjectionConfig) -> Metric
 
 
 def compute_survival(answer: str, false_statement: str) -> dict:
-    """Compute Survival Rate using 3 detection methods.
+    """Compute Survival Rate using exact match + combined LLM call.
 
     Returns dict with exact, semantic, judge, and final grade.
     """
     exact = detect_exact_match(answer, false_statement)
-    semantic = detect_semantic_similarity(answer, false_statement)
-    judge = detect_llm_judge(answer, false_statement)
+
+    # Combined semantic + judge in a single LLM call
+    prompt = (
+        f"You are a hallucination detection judge.\n\n"
+        f'Injected false claim: "{false_statement}"\n\n'
+        f'Text to evaluate: "{answer[:500]}"\n\n'
+        f"1) Rate semantic similarity between the claim and the text (0.0 to 1.0).\n"
+        f"2) Classify: verbatim / paraphrased / contradicted / absent\n\n"
+        f"Reply in EXACTLY this format (nothing else):\n"
+        f"similarity: 0.X\nverdict: word"
+    )
+    semantic = 0.0
+    judge = "absent"
+    try:
+        response = chat([{"role": "user", "content": prompt}], max_tokens=100)
+        for line in response.strip().split("\n"):
+            line = line.strip().lower()
+            if line.startswith("similarity:"):
+                try:
+                    semantic = max(0.0, min(1.0, float(line.split(":")[1].strip())))
+                except ValueError:
+                    pass
+            elif line.startswith("verdict:"):
+                v = line.split(":")[1].strip()
+                if v in ("verbatim", "paraphrased", "contradicted", "absent"):
+                    judge = v
+    except Exception:
+        pass
 
     # Conservative intersection for final grade
     if exact:
@@ -157,7 +179,7 @@ def compute_amplification(messages, false_statement: str) -> float | None:
             f"Reply with ONLY a number 1-5."
         )
         try:
-            response = chat([{"role": "user", "content": prompt}], max_tokens=5)
+            response = chat([{"role": "user", "content": prompt}], max_tokens=100)
             return float(response.strip())
         except (ValueError, TypeError):
             return 3.0
@@ -169,24 +191,29 @@ def compute_amplification(messages, false_statement: str) -> float | None:
 
 
 def compute_mutation_rate(messages, false_statement: str) -> float:
-    """Compute mean semantic similarity of restatements to the original.
+    """Compute mean keyword overlap of restatements vs the original.
 
-    For each message containing the hallucination, compute similarity
-    to the original false statement. Lower = more mutation.
+    For each message containing the hallucination (by keyword match),
+    compute word overlap ratio. Lower = more mutation. No LLM calls.
     """
     false_lower = false_statement.lower()
-    similarities = []
-
-    for msg in messages:
-        if (
-            msg.role == "assistant"
-            and msg.content
-            and false_lower in msg.content.lower()
-        ):
-            sim = detect_semantic_similarity(msg.content, false_statement)
-            similarities.append(sim)
-
-    if not similarities:
+    key_terms = set(w for w in false_lower.split() if len(w) > 3)
+    if not key_terms:
         return 0.0
 
-    return sum(similarities) / len(similarities)
+    overlaps = []
+    for msg in messages:
+        if msg.role == "assistant" and msg.content:
+            content_lower = msg.content.lower()
+            if false_lower in content_lower:
+                overlaps.append(1.0)  # exact match = no mutation
+            else:
+                matched = sum(1 for t in key_terms if t in content_lower)
+                ratio = matched / len(key_terms)
+                if ratio >= 0.5:
+                    overlaps.append(ratio)
+
+    if not overlaps:
+        return 0.0
+
+    return sum(overlaps) / len(overlaps)

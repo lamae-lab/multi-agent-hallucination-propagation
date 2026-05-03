@@ -99,7 +99,7 @@ def _f3_manager_amplification(result: Result, false_stmt: str) -> tuple[str, flo
             f'Text: "{text[:300]}"\n\nReply with ONLY a number 1-5.'
         )
         try:
-            response = chat([{"role": "user", "content": prompt}], max_tokens=5)
+            response = chat([{"role": "user", "content": prompt}], max_tokens=100)
             return float(response.strip())
         except (ValueError, TypeError):
             return 3.0

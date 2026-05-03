@@ -1,0 +1,4 @@
+{"type": "metadata", "model": "gpt-oss-120b", "provider": "ilaas", "seed": null, "temperature": 0, "timestamp": "2026-05-01T21:14:58", "duration_seconds": 3.13, "truncated": false, "iterations": 0, "task": "Agnes Body was the founding head of a state secondary school located on what road?", "task_id": "5adebc9b554299728e26c79d", "expected_answer": "Wragby Road", "answer": "{\"query\": \"Agnes Body \\\"founding head\\\"\"}"}
+{"type": "message", "role": "system", "content": "Handoff swarm session"}
+{"type": "message", "role": "user", "content": "Agnes Body was the founding head of a state secondary school located on what road?"}
+{"type": "message", "role": "assistant", "content": "{\"query\": \"Agnes Body \\\"founding head\\\"\"}", "name": "research_agent"}

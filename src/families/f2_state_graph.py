@@ -33,6 +33,8 @@ class F2StateGraph(BaseFamily):
             model=provider["model"],
             temperature=0,
             max_tokens=500,
+            timeout=60,
+            max_retries=0,
         )
 
         # Wrap tools for LangChain
