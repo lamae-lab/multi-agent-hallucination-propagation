@@ -39,7 +39,16 @@ notebooks/.ipynb_checkpoints/
 .env
 .env.local
 *.local.yaml
-.claude/settings.local.json
+
+# Claude Code
+.claude/
+
+# Speckit / specs docs
+.specify/
+specs/
+
+# Papers (local drafts)
+papers/
 
 # Cache
 .cache/
