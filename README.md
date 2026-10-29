@@ -93,3 +93,28 @@ LLM provider settings are in `src/llm/config.py`. API keys are loaded from envir
 | `OLLAMA_API_KEY` | Ollama API key (default: `ollama`) |
 
 Set `ACTIVE_PROVIDER` in `src/llm/config.py` to switch between `ilaas`, `openai`, or `ollama`.
+
+## Citation
+
+If you use this framework, please cite:
+
+> Jabbar, S., Cruz, C., Bertolim, M.A. (2026). Hallucination propagation in multi-agent LLM systems: survival, distance, amplification, and mutation. *AGENTICS 2026*.
+
+## References
+
+- ChatMED-Project (2024). RAGCare-QA: a medical question answering dataset for retrieval-augmented generation. Hugging Face dataset.
+- Cobbe, K. et al. (2021). Training verifiers to solve math word problems. arXiv:2110.14168.
+- Cohen, R., Biran, M., Yoran, O., Globerson, A., Geva, M. (2023). LM vs LM: detecting factual errors via cross examination. arXiv:2305.13281.
+- Du, Y., Li, S., Torralba, A., Tenenbaum, J.B., Mordatch, I. (2023). Improving factuality and reasoning in language models through multiagent debate. arXiv:2305.14325.
+- Es, S., James, J., Espinosa-Anke, L., Schockaert, S. (2024). RAGAS: automated evaluation of retrieval augmented generation. *EACL System Demonstrations*, 150–163.
+- Guo, T. et al. (2024). Large language model based multi-agents: a survey of progress and challenges. *IJCAI*, 8048–8057.
+- Hong, S. et al. (2024). MetaGPT: meta programming for a multi-agent collaborative framework. arXiv:2308.00352.
+- Ji, Z. et al. (2023). Survey of hallucination in natural language generation. *ACM Computing Surveys* 55(12), 1–38.
+- LangChain, Inc. (2024). LangGraph: build stateful multi-actor applications with LLMs. [github.com/langchain-ai/langgraph](https://github.com/langchain-ai/langgraph)
+- Li, J., Cheng, X., Zhao, W.X., Nie, J.-Y., Wen, J.-R. (2023). HaluEval: a large-scale hallucination evaluation benchmark for large language models. *EMNLP*, 6449–6464.
+- Manakul, P., Liusie, A., Gales, M.J.F. (2023). SelfCheckGPT: zero-resource black-box hallucination detection for generative large language models. *EMNLP*, 9004–9017.
+- OpenAI (2025). OpenAI Agents SDK. [github.com/openai/openai-agents-python](https://github.com/openai/openai-agents-python)
+- Vosoughi, S., Roy, D., Aral, S. (2018). The spread of true and false news online. *Science* 359(6380), 1146–1151.
+- Wu, Q. et al. (2023). AutoGen: enabling next-gen LLM applications via multi-agent conversation. arXiv:2308.08155.
+- Yang, Z. et al. (2018). HotpotQA: a dataset for diverse, explainable multi-hop question answering. *EMNLP*, 2369–2380.
+- Yao, S. et al. (2023). ReAct: synergizing reasoning and acting in language models. *ICLR*.
